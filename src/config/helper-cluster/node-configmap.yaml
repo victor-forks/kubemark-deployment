@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  content.type: ""
+  kernel.monitor: "{\n\t\"plugin\": \"filelog\",\n\t\"pluginConfig\": {\n\t\t\"timestamp\":
+    \"dummy\",\n\t\t\"message\": \"dummy\",\n\t\t\"timestampFormat\": \"dummy\"\n\t},\n\t\"logPath\":
+    \"/dev/null\",\n\t\"lookback\": \"10m\",\n\t\"bufferSize\": 10,\n\t\"source\":
+    \"kernel-monitor\",\n\t\"conditions\": [\n\t\t{\n\t\t\t\"type\": \"KernelDeadlock\",\n\t\t\t\"reason\":
+    \"KernelHasNoDeadlock\",\n\t\t\t\"message\": \"kernel has no deadlock\"\n\t\t}\n\t],\n\t\"rules\":
+    []\n}\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: node-configmap
+  namespace: kubemark
